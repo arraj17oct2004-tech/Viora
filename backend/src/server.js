@@ -5,10 +5,12 @@ import { connectDB } from './lib/db.js'
 
 const app = express()
 
+app.use(express.json());
+
+
 app.get('/',(req,res)=>{
     res.send("Hello from SERVER")
 })
-
 
 
 app.use('/api/auth',authRoutes)
